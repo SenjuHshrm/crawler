@@ -9,39 +9,30 @@ block script
 block content
   .container
     h1.crawler-header
-      strong Big Outsource Web Crawler
+      strong US Web Crawler
     div#alert-area
     form
       .container-fluid.well
         .row.input-spacing
           .col-xs-4
-            label(for="select-country") Select a country:
-            #select-country
-            input.country(type="radio", name="country", value = "United States")
-            | &nbsp; United States
-            br
-            input.country(type="radio", name="country", value = "United Kingdom")
-            | &nbsp; United Kingdom
-
-          .col-xs-4
             label(for="website") Select a website:
             br
             input#website.Datalist.search-box(type="text", list="website-crawlers", placeholder="e.g. Yell.com")
             datalist#website-crawlers
-
-          .col-xs-4
-            label(for="cities") Select a city:
             br
-            input#city.Datalist.search-box(type="text", list="json-cities", placeholder="e.g. Glasgow")
-            datalist#json-cities
-
-        .row.input-spacing
-          .col-xs-4
+            br
+            br
             label Crawl Mode:
             br
             label#crawlmode.switch
               input(type="checkbox", checked="checked")
               div.slider.round
+          .col-xs-4
+            #USState
+              label(for="state") Select a state:
+              br
+              input#state.Datalist.search-box(type="text", list="json-states", placeholder="e.g. Texas")
+              datalist#json-states
             br
             br
             button#scrape.cr-btn(type="button") Scrape
@@ -50,15 +41,14 @@ block content
             button.cr-btn(type='reset') Reset
             button#clr-alert.cr-btn(type='button') Clear Alerts
           .col-xs-4
-            #USState
-              label(for="state") Select a state:
-              br
-              input#state.Datalist.search-box(type="text", list="json-states", placeholder="e.g. Texas")
-              datalist#json-states
-          .col-xs-4
+            label(for="cities") Select a city:
+            br
+            input#city.Datalist.search-box(type="text", list="json-cities", placeholder="e.g. Glasgow")
+            datalist#json-cities 
+            br
+            br
             label(for="category") Select a category:
             br
             textarea#category.Datalist.search-box.autoresize(name="textarea" rows="1")
-
   ul#results(data-role='listview', data-filter='true')
     include crawl-template.html

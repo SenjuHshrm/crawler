@@ -58,13 +58,6 @@ exports.getCrawler = (req, res) => {
  *
  */
 exports.postData = (req, res, next) => {
-    const errors = req.validationErrors();
-
-    if (errors) {
-        req.flash('errors', errors);
-        return res.redirect('/signup');
-    }
-
     const data = req.body;
     const business = new Business({
         name: data.name,

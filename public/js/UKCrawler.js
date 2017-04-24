@@ -133,8 +133,9 @@ $(document).ready(function() {
 
         for (var i = 0; i < categories.length; i++) {
             parameters.category = categories[i];
-
-            var scrape = $.get('/search/d121', parameters, function(data) {
+            newAlert("info",
+                `Scraping ${parameters.category}(s) from ${parameters.city}`);
+            var scrape = $.get('/search-UK', parameters, function(data) {
                     if (data instanceof Object && data.business.length > 0) {
                         results.append(dataTemplate({
                             page: data
