@@ -1,0 +1,43 @@
+<script id="search-results" type="text/x-handlebars-template">
+  {{#each .}}
+    <table class="table table-hover table-bordered table-striped table-responsive">
+        <thead>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Region</th>
+            <th>Postal</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Reviews</th>
+            <th>Website</th>
+            <th>Email</th>
+            <th>Contact Name</th>
+            <th>Contact Title</th>
+            <th>Scraper</th>
+        </thead>
+        <tbody>
+              {{#each business}}
+              <tr>
+                <td><a href={{page_url}} target="_blank">{{name}}</a></td>
+                <td>{{phone}}</td>
+                <td>{{street_address}}</td>
+                <td>{{address_locality}}</td>
+                <td>{{address_region}}</td>
+                <td>{{postal_code}}</td>
+                <td>{{category}}</td>
+                <td>{{price_range}}</td>
+                <td>{{star_rating}}</td>
+                <td>{{review_count}}</td>
+                <td>{{website}}</td>
+                <td>{{email}}</td>
+                <td>{{contact_person}}</td>
+                <td>{{contact_title}}</td>
+                <td>{{scraper}}</td>
+              {{/each}}
+        </tbody>
+    </table>
+  {{/each}}
+</script>

@@ -1,0 +1,249 @@
+#label {
+  text-align: center;
+  width: 500px;
+  height: 70px;
+  font-size: 3.5em;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#input {
+  text-align: center;
+  width: 400px;
+  height: 70px;
+  font-size: 2.5em;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#button {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  font-size: 2.5em;
+  border-radius: 8px;
+  display: inline-block;
+}
+.switch{height:30px;}
+.crawl-mode-label{text-align:center;}
+///////////Dice-Senju///////
+.cr-btn {
+  height: 40px;
+  text-align: center;
+  width: 100px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid rgb(0, 42, 67);
+  color:rgb(0, 42, 67);
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:12px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: rgb(0, 42, 67);
+  }
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+}
+
+.crawler-header{
+  font-size:50px;
+  margin-top:50px;
+  font-family: "Courier New", Courier, monospace;
+  padding:40px 0px 10px 0px;
+}
+
+.Datalist {
+  display: inline-block;
+  max-width: 100%;
+  height:relative;
+  width: 12em;
+  margin: 0 0 0.6em 0;
+  padding: 0.3em 0.6em;
+  background: white;
+  border: 2px solid #cccccc;
+  border-radius: 0.3em;
+  font-size: 20px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.Datalist:hover,
+.Datalist:textarea {
+  box-shadow: 0 0 0 2px rgb(38, 152, 203);
+
+}
+
+#position{
+  margin:0 30%;
+}
+
+.crawler-btn{
+  padding:100px 0px 50px 0px;
+}
+.search-box,.close-icon{
+	position: relative;
+	padding: 10px;
+}
+.search-wrapper {
+	width: 500px;
+	margin: auto;
+	margin-top: 50px;
+}
+.search-box{
+	width: 80%;
+	border: 1px solid #ccc;
+  outline: 0;
+  border-radius: 15px;
+}
+.search-box:textarea{
+	box-shadow: 0 0 15px 5px #b0e0ee;
+	border: 2px solid #bebede;
+  border-radius: 15px;
+}
+.close-icon{
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+}
+.close-icon:after {
+	content: "X";
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background-color: #FA9595;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px #E50F0F;
+	cursor: pointer;
+}
+.search-box:not(:valid) ~ .close-icon {
+	display: none;
+}
+
+
+//2nd close
+
+.close-category{
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+}
+.close-category:after {
+	content: "X";
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background-color: #FA9595;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px #E50F0F;
+	cursor: pointer;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  input {
+    display: none;
+  }
+}
+
+/* Hide default HTML checkbox */
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+input {
+  &:checked + .slider {
+    background-color: #2196F3;
+  }
+  &:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  &:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+  &:before {
+    border-radius: 50%;
+  }
+}
+.input-spacing
+{
+  padding:20px 0px 20px 0px;
+}
+.autoresize {
+    resize: none;
+}
+.well{
+  border:3px solid gray;
+  border-radius:15px;
+}

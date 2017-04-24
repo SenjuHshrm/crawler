@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  .container(style='padding:50px 20px 0px 20px')
+    .page-header
+      h3 Contact Form
+
+    form.form-horizontal(method='POST')
+      input(type='hidden', name='_csrf', value=_csrf)
+      .row.col-sm-9
+        h1(style="text-align: center; font-family:Ar Cena; color:#005ce6;") Get In Touch
+        .form-group
+          label(class='col-sm-2 control-label', for='name') Name
+          .col-sm-9
+            input.form-control(type='text', class='txtfld', name='name', id='name', autofocus=true)
+        .form-group
+          label(class='col-sm-2 control-label', for='email') Email
+          .col-sm-9
+            input.form-control(type='text', class='txtfld', name='email', id='email')
+        .form-group
+          label(class='col-sm-2 control-label', for='message') Body
+          .col-sm-9
+            textarea.form-control(name='message', class='txtfld', id='message', rows='7')
+        .form-group
+          .col-sm-offset-2.col-sm-8
+            button.btn.btn-primary(type='submit')
+              i.fa.fa-envelope
+              | Send
+      .row.col-sm-3.well
+        h1(style="text-align: center; font-family:Ar Cena; color:#005ce6;") Visit Us
+        .info
+          h4(style="border-bottom: 1px solid #cdcccc; font-family:Ar Cena;") 
+            span.fa.fa-map-marker &nbsp; ADDRESS
+          br
+          p.visit-info Lot 1&2 Guevarra Subd., Brgy. Del Remedio, San Pablo City, Laguna, Philippines 4000
+          
+        .info
+          h4(style="border-bottom: 1px solid #cdcccc; font-family:Ar Cena;") 
+            span.fa.fa-envelope &nbsp; EMAIL
+          br
+          p.visit-info 
+            a(href='mailto:info@bigoutsource.com') info@bigoutsource.com
+          
+        .info
+          h4(style="border-bottom: 1px solid #cdcccc; font-family:Ar Cena;") 
+            span.fa.fa-phone &nbsp; PH NUMBER
+          br
+          p.visit-info +6349 521 1218
+          
+        .info
+          h4(style="border-bottom: 1px solid #cdcccc; font-family:Ar Cena;") 
+            span.fa.fa-phone &nbsp; US NUMBER
+          br
+          p.visit-info +1888 886 5490
