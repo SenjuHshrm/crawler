@@ -17,8 +17,6 @@ html {
 }
 
 body {
-  margin-bottom: 75px;
-
   #containerPadding {
     padding-top: 70px;
     margin-top: 0px;
@@ -26,6 +24,7 @@ body {
 }
 
 footer {
+  background-color:white;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -177,6 +176,15 @@ textarea {
   padding:0px;
   min-height:500px;
   background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.dev-sec{
+  background-image:url('/dev_bg.png');
+  padding:0px;
+  min-height:700px;
   background-position:center;
   background-repeat:no-repeat;
   background-size:cover;
