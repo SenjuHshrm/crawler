@@ -13,7 +13,7 @@ $(document).ready(function() {
     $.ajaxSetup({
       timeout: 300000
     });
-    $('#website').change(loadUsStates);
+    loadUsStates();
     $('#state').change(loadUsCities);
     $('#scrape').on('click',scrapeThis);
     // $('#download').click(downloadCSV);

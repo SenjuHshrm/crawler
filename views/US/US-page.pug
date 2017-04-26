@@ -22,17 +22,12 @@ block content
             br
             br
             br
+            br
             label Crawl Mode:
             br
             label#crawlmode.switch
               input(type="checkbox")
               div.slider.round
-          .col-xs-4
-            #USState
-              label(for="state") Select a state:
-              br
-              input#state.Datalist.search-box(type="text", list="json-states", placeholder="e.g. Texas")
-              datalist#json-states
             br
             br
             button#scrape.cr-btn(type="button") Scrape
@@ -41,12 +36,19 @@ block content
             button.cr-btn(type='reset') Reset
             button#clr-alert.cr-btn(type='button') Clear Alerts
           .col-xs-4
+            #USState
+              label(for="state") Select a state:
+              br
+              input#state.Datalist.search-box(type="text", list="json-states", placeholder="e.g. Texas")
+              datalist#json-states
+            br
+            br
+            br
             label(for="cities") Select a city:
             br
             input#city.Datalist.search-box(type="text", list="json-cities", placeholder="e.g. Glasgow")
             datalist#json-cities 
-            br
-            br
+          .col-xs-4
             label(for="category") Select a category:
             br
             textarea#category.Datalist.search-box.autoresize(name="textarea" rows="1")
